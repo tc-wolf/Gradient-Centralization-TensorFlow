@@ -30,7 +30,7 @@ def get_centralized_gradients(optimizer, loss, params):
             axis = list(range(grad_len - 1))
             grad -= tf.reduce_mean(grad,
                                    axis=axis,
-                                   keep_dims=True)
+                                   keepdims=True)
         grads.append(grad)
 
     if None in grads:
